@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    /*sets outer spacing around elements*/
+    padding: 0;
+    /*creates space between elements conent and its own border within*/
+    box-sizing: border-box;
+    /*bokser*/
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Century, sans-serif;
+}
+
+/*Navbar Section*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    opacity: 100%;
+    z-index: 100;
+
+    /*allows navbar to stay at upper screen, in sight always*/
+    top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 20px;
+}
+
+.navbar ul li {
+    font-family: Century, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    /*makes additional space inside an element\*/
+    transition: all 0.5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar, #logo1 {
+    justify-content: left;
+}
+.navbar, .icons {
+    justify-content: right;
+    justify-content: space-between;
+}
+
+
+
+
+/*Home Section*/
+
+#home {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 100px;
+    height: 930px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    /*layers !!!*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(Bilder/IMG_4777_png.jpg);
+    height: 123.5%;
+    width: 100%;
+    z-index: -1;
+    /*lower value places it behind other elements*/
+    opacity: 0.8;
+    /*transperancy*/
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 49%;
+    right: 4%;
+}
+
+.head {
+    font-family: Century, sans-serif;
+    font-size: 3rem;
+    /*3 times browser font size*/
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.btn {
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    /*Changes mouse cursor to hand icon when hovering over the buttons*/
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15 white;
+    /*adds shadow effect to element*/
+    font-weight: bold;
+}
+
+/*About Section*/
+
+#about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+#about h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+
+#content {
+    display: flex;
+}
+
+#pic img {
+    width: 100%;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 70px;
+}
+
+#intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/*Portfolio Section*/
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+
+.gallery img {
+    width: 100%;
+    max-width: 300px; 
+    height: 200px;
+    padding: 10%;
+}
+
+.gallery img:hover {
+    transform: scale(1.2) rotateY(180deg); /* Enlarge the image and rotate 180 degrees sideways on hover */
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+    width: auto;
+    
+}
+.image-container2 {
+    position: relative;
+    height: 200px;
+}
+
+.image-text, .image-text2, .image-text3  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.5s ease; /* Add a smooth transition for the text */
+}
+
+.image-text, p {
+    color: black;
+}
+.image-text2 p {
+    color: white;
+}
+.image-text3 p {
+    color: white;
+}
+
+/*Services Section*/
+
+#services {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(255, 45, 45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: background .8s;
+}
+
+.box:hover {
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(255, 45, 45);
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 10;
+}
+
+/*Contact Section*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.input {
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    min-width: 150px;
+    border: none;
+    outline: none;
+}
+
+#msg {
+    width: 20%;
+    padding: 85px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+
+#send {
+    padding: 10px;
+    width: 10%;
+    min-width: 100px;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+
+#send:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+/*Footer*/
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.footer p {
+    color: white;
+}
+
+.contactinfo {
+    display: flex;
+    justify-items: center;
+    gap: 850px;
+}
+
+/*media query*/
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        max-width: 100px;
+    }
+
+   
+
+}
